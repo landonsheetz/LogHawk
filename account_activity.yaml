@@ -1,0 +1,26 @@
+- id: ACCT-NEW-ADMIN-GRANT
+  title: Account added to a privileged group
+  severity: high
+  mitre: T1098
+  type: match
+  description: >
+    An account was granted membership in a high-privilege group such as Domain
+    Admins. On its own this can be routine, but it should always be reviewed
+    against a change ticket.
+  selection:
+    event_type: account
+    action: privilege_granted
+    command_line|contains: "group=Domain Admins"
+
+- id: ACCT-DISABLED-ACCOUNT-LOGIN
+  title: Successful login to a previously disabled account
+  severity: critical
+  mitre: T1078.002
+  type: match
+  description: >
+    A successful authentication tagged as belonging to a disabled account.
+    Almost always malicious, since disabled accounts should never authenticate.
+  selection:
+    event_type: authentication
+    action: login_success
+    command_line|contains: "account_state=disabled"

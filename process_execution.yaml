@@ -1,0 +1,41 @@
+- id: PROC-ENCODED-POWERSHELL
+  title: Encoded PowerShell command execution
+  severity: high
+  mitre: T1059.001
+  type: match
+  description: >
+    PowerShell invoked with an encoded command block. Legitimate admins
+    occasionally do this, but attackers rely on it constantly to hide payloads,
+    so it is worth surfacing every time.
+  selection:
+    event_type: process
+    process|contains: powershell
+    command_line|contains: "-enc"
+
+- id: PROC-LOLBIN-CERTUTIL-DOWNLOAD
+  title: certutil used to download a file
+  severity: high
+  mitre: T1105
+  type: match
+  description: >
+    certutil.exe is a signed Windows binary that attackers abuse to pull remote
+    payloads while blending in with normal activity (a living-off-the-land, or
+    LOLBin, technique).
+  selection:
+    event_type: process
+    process|contains: certutil
+    command_line|contains: urlcache
+
+- id: PROC-SUSPICIOUS-CHILD-OF-OFFICE
+  title: Command shell spawned by an Office application
+  severity: critical
+  mitre: T1204.002
+  type: match
+  description: >
+    A macro-enabled document launching cmd.exe or powershell is a strong signal
+    of a phishing payload detonating. Here the command_line carries the parent
+    process for demonstration.
+  selection:
+    event_type: process
+    process|in: ["cmd.exe", "powershell.exe"]
+    command_line|contains: "parent=winword.exe"

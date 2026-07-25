@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LogHawk Detection Report</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #f4f5f7; color: #1a202c; }
+  header { background: #12233b; color: #fff; padding: 24px 32px; }
+  header h1 { margin: 0; font-size: 22px; }
+  header p { margin: 6px 0 0; color: #9fb3c8; font-size: 13px; }
+  .stats { display: flex; gap: 16px; padding: 24px 32px; }
+  .stat { background: #fff; border-radius: 8px; padding: 16px 22px; box-shadow: 0 1px 3px rgba(0,0,0,.08); text-align: center; }
+  .stat .num { display: block; font-size: 26px; font-weight: 700; }
+  .stat .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: #718096; }
+  table { width: calc(100% - 64px); margin: 0 32px 40px; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  th, td { text-align: left; padding: 11px 14px; font-size: 13px; border-bottom: 1px solid #edf2f7; vertical-align: top; }
+  th { background: #edf2f7; text-transform: uppercase; font-size: 11px; letter-spacing: .04em; color: #4a5568; }
+  .pill { color: #fff; padding: 3px 9px; border-radius: 20px; font-size: 11px; text-transform: uppercase; }
+  .muted { color: #718096; font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>LogHawk Detection Report</h1>
+  <p>Source: sample_logs/auth_events.json &nbsp;|&nbsp; Total alerts: 8</p>
+</header>
+<div class="stats"><div class="stat"><span class="num">3</span><span class="lbl">critical</span></div><div class="stat"><span class="num">5</span><span class="lbl">high</span></div><div class="stat"><span class="num">0</span><span class="lbl">medium</span></div><div class="stat"><span class="num">0</span><span class="lbl">low</span></div><div class="stat"><span class="num">0</span><span class="lbl">info</span></div></div>
+<table>
+  <thead><tr>
+    <th>Severity</th><th>Detection</th><th>MITRE</th><th>First seen</th>
+    <th>User</th><th>Source IP</th><th>Events</th>
+  </tr></thead>
+  <tbody><tr><td><span class="pill" style="background:#7b1113">critical</span></td><td><strong>Successful login from a blocked country</strong><br><span class="muted">A successful authentication whose resolved source country is on the deny list. Treated as a probable account compromise until proven otherwise.
+</span></td><td>T1078</td><td>2024-11-02T09:04:00Z</td><td>administrator</td><td>203.0.113.66</td><td>1</td></tr><tr><td><span class="pill" style="background:#7b1113">critical</span></td><td><strong>Command shell spawned by an Office application</strong><br><span class="muted">A macro-enabled document launching cmd.exe or powershell is a strong signal of a phishing payload detonating. Here the command_line carries the parent process for demonstration.
+</span></td><td>T1204.002</td><td>2024-11-02T10:40:00Z</td><td>dburns</td><td>10.4.12.28</td><td>1</td></tr><tr><td><span class="pill" style="background:#7b1113">critical</span></td><td><strong>Successful login to a previously disabled account</strong><br><span class="muted">A successful authentication tagged as belonging to a disabled account. Almost always malicious, since disabled accounts should never authenticate.
+</span></td><td>T1078.002</td><td>2024-11-02T11:10:00Z</td><td>former_intern</td><td>198.51.100.77</td><td>1</td></tr><tr><td><span class="pill" style="background:#b3261e">high</span></td><td><strong>Brute force against a single account</strong><br><span class="muted">Five or more failed logins for the same user from the same source IP inside a five minute window. Classic password guessing against one account.
+</span></td><td>T1110.001</td><td>2024-11-02T09:00:00Z</td><td>administrator</td><td>203.0.113.66</td><td>7</td></tr><tr><td><span class="pill" style="background:#b3261e">high</span></td><td><strong>Password spray from a single source</strong><br><span class="muted">Many failed logins from one source IP spread across different accounts. Grouping only on source IP (not user) is what separates spraying from a plain brute force. This rule fires when a source produces 8+ failures in ten minutes; correlate with distinct users during triage.
+</span></td><td>T1110.003</td><td>2024-11-02T10:00:00Z</td><td>jsheetz</td><td>198.51.100.23</td><td>10</td></tr><tr><td><span class="pill" style="background:#b3261e">high</span></td><td><strong>Encoded PowerShell command execution</strong><br><span class="muted">PowerShell invoked with an encoded command block. Legitimate admins occasionally do this, but attackers rely on it constantly to hide payloads, so it is worth surfacing every time.
+</span></td><td>T1059.001</td><td>2024-11-02T10:30:00Z</td><td>mrivera</td><td>10.4.12.31</td><td>1</td></tr><tr><td><span class="pill" style="background:#b3261e">high</span></td><td><strong>certutil used to download a file</strong><br><span class="muted">certutil.exe is a signed Windows binary that attackers abuse to pull remote payloads while blending in with normal activity (a living-off-the-land, or LOLBin, technique).
+</span></td><td>T1105</td><td>2024-11-02T10:35:00Z</td><td>mrivera</td><td>10.4.12.31</td><td>1</td></tr><tr><td><span class="pill" style="background:#b3261e">high</span></td><td><strong>Account added to a privileged group</strong><br><span class="muted">An account was granted membership in a high-privilege group such as Domain Admins. On its own this can be routine, but it should always be reviewed against a change ticket.
+</span></td><td>T1098</td><td>2024-11-02T11:00:00Z</td><td>svc_backup</td><td>203.0.113.66</td><td>1</td></tr></tbody>
+</table>
+</body>
+</html>

